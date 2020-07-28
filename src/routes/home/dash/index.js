@@ -10,7 +10,7 @@ const Home = (props) => {
   console.log(props)
 
   return (<div>
-    <div className={classNames(style['title'])}>home</div>
+    <div>home</div>
     <div>
       <DashBoard />
     </div>
