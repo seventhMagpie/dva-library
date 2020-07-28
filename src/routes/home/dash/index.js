@@ -1,27 +1,22 @@
 import { connect } from 'dva'
 import classNames from 'classnames'
 
+import DashBoard from '../../../components/Home/DashBoard'
+import DashChart from '../../../components/Home/DashChart'
 import style from './index.less'
 
 const Home = (props) => {
 
-  const { 
-    dispatch
-  } = props
-
-  const onClick = () => {
-    // console.log(props)
-    dispatch({
-      type: 'text',
-      payload: {
-        value: 1
-      }
-    })
-  }
+  console.log(props)
 
   return (<div>
-    <div onClick={onClick}>home</div>
-    <div id="echarts-dash-1" className={classNames(style['echarts-dash-1'])}></div>
+    <div className={classNames(style['title'])}>home</div>
+    <div>
+      <DashBoard />
+    </div>
+    <div>
+      <DashChart />
+    </div>
   </div>)
 }
 
