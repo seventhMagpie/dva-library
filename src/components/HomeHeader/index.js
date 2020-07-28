@@ -17,10 +17,10 @@ const HomeHeader = () => {
   console.log(style)
 
   return (<div className={classNames(style['c-home-header'])} flex-row="between">
-    <div flex-row="start">
-      <img className={classNames(style['logo-icon'])} src={logo} />
+    <Link to={'/'} className={classNames(style['logo'], 'select-none pointer')} flex-row="center">
+      <img className={classNames(style['logo-icon'])} src={logo} alt="logo" />
       <div className={classNames(style['logo-text'])}>魔都书城</div>
-    </div>
+    </Link>
     <div>
       {
         menuList.map((curr) => {
