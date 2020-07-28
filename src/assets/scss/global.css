@@ -7,9 +7,22 @@
   height: 100%;
 }
 
-
-:global(.flex-row) {
+:global([flex-row]) {
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  align-items: center;
+}
+:global([flex-col]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:global([flex-row='start']) {
+  justify-content: flex-start;
+}
+:global([flex-row='between']) {
+  justify-content: space-between;
+}
+:global([flex-row='end']) {
+  justify-content: flex-end;
 }

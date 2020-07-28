@@ -5,7 +5,7 @@ import Home from './dash'
 import BookBorrow from '../book-borrow'
 import BookReturn from '../book-return'
 
-import style from './index.scss'
+import style from './index.less'
 
 const homeRoute = () => {
   return (<div className={style.home}>
