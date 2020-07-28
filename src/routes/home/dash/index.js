@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { connect } from 'dva'
+import echarts from 'echarts'
 import classNames from 'classnames'
 
 import style from './index.less'
@@ -18,6 +20,22 @@ const Home = (props) => {
       }
     })
   }
+  useEffect(() => {
+    const echartDash1 = document.getElementById('echarts-dash-1')
+    echarts.init(echartDash1).setOption({
+      xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line'
+      }]
+    })
+  }, [])
 
   return (<div>
     <div onClick={onClick}>home</div>
