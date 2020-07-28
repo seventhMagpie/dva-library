@@ -30,7 +30,7 @@ const HomeSidebar = () => {
         menuList.map((curr) => {
           if (curr.children && curr.children instanceof Array) {
             return [
-              <div>{curr.text}</div>
+              <div key={curr.to}>{curr.text}</div>
             ].concat(
               curr.children.map(c => {
                 return (<Link to={c.to} key={c.to}>{c.text}</Link>)

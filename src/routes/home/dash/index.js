@@ -1,4 +1,5 @@
 import { connect } from 'dva'
+import style from './index.less'
 
 const Home = (props) => {
 
@@ -17,7 +18,8 @@ const Home = (props) => {
   }
 
   return (<div>
-    <button onClick={onClick}>获取model数据</button>
+    <div>home</div>
+    <div id="echarts-dash-1"></div>
   </div>)
 }
 
