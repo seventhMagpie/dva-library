@@ -18,7 +18,7 @@ const HomeHeader = () => {
 
   return (<div className={classNames(style['c-home-header'])} flex-row="between">
     <div flex-row="start">
-      <img className={classNames(style['logo-icon'], 'logo-icon')} src={logo} />
+      <img className={classNames(style['logo-icon'])} src={logo} />
       <div className={classNames(style['logo-text'])}>魔都书城</div>
     </div>
     <div>
