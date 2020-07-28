@@ -5,15 +5,6 @@ import logo from '../../assets/img/yay.jpg'
 
 const HomeHeader = () => {
 
-  const menuList = [
-    {
-      to: '/book/borrow',
-      text: '看书'
-    }, {
-      to: '/book/return',
-      text: '还书'
-    }
-  ]
   console.log(style)
 
   return (<div className={classNames(style['c-home-header'])} flex-row="between">
@@ -22,11 +13,7 @@ const HomeHeader = () => {
       <div className={classNames(style['logo-text'])}>魔都书城</div>
     </Link>
     <div>
-      {
-        menuList.map((curr) => {
-        return (<Link to={curr.to} key={curr.to}>{curr.text}</Link>)
-        })
-      }
+      00
     </div>
   </div>)
 }

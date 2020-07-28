@@ -1,5 +1,6 @@
 
 import { Switch, Route } from 'dva/router'
+import classNames from 'classnames'
 import { HomeHeader, HomeSidebar } from '../../components'
 import Home from './dash'
 import BookBorrow from '../book-borrow'
@@ -12,8 +13,8 @@ const homeRoute = () => {
     <div className={style.header}>
       <HomeHeader></HomeHeader>
     </div>
-    <div className="full-box, flex-row">
-      <div className={style.sidebar}>
+    <div className={classNames("full-box", style['home-body'])} flex-row="start">
+      <div className={classNames(style['home-body'], style.sidebar)}>
         <HomeSidebar></HomeSidebar>
       </div>
       <Switch>
