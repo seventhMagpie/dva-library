@@ -1,13 +1,15 @@
 .c-home-header {
   width: 100%;
+  padding: 0 20px;
   .logo {
-    width: 200px;
-    margin-left: 20px;
-    color: #999;
-    opacity: .8;
-    transition: all .2s linear;
-    &:hover {
-      opacity: 1;
+    &-link {
+      width: 200px;
+      color: #999;
+      opacity: .8;
+      transition: all .2s linear;
+      &:hover {
+        opacity: 1;
+      }
     }
     &-icon {
       width: 48px;
@@ -16,5 +18,13 @@
     &-text {
       font-size: 18px;
     }
+  }
+}
+
+.user-center {
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
   }
 }
