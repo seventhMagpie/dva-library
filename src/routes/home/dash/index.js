@@ -1,4 +1,6 @@
 import { connect } from 'dva'
+import classNames from 'classnames'
+
 import style from './index.less'
 
 const Home = (props) => {
@@ -18,8 +20,8 @@ const Home = (props) => {
   }
 
   return (<div>
-    <div>home</div>
-    <div id="echarts-dash-1"></div>
+    <div onClick={onClick}>home</div>
+    <div id="echarts-dash-1" className={classNames(style['echarts-dash-1'])}></div>
   </div>)
 }
 
