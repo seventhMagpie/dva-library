@@ -9,7 +9,7 @@ import BookReturn from '../book-return'
 import style from './index.less'
 
 const homeRoute = () => {
-  return (<div className={style.home}>
+  return (<div className={style.home} flex-col="start">
     <div className={style.header}>
       <HomeHeader></HomeHeader>
     </div>

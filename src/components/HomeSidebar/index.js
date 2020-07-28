@@ -15,6 +15,7 @@ const HomeSidebar = () => {
   ]
 
   return (<div className={classNames('full-box', style['c-home-sidebar'])}>
+    <div className={classNames(style['sidebar-title'])}></div>
     <div flex-col="start">
       {
         menuList.map((curr) => {
