@@ -6,8 +6,6 @@ import UserCenter from './UserCenter'
 
 const HomeHeader = () => {
 
-  console.log(style)
-
   return (<div className={classNames(style['c-home-header'])} flex-row="between">
     <div>
       <Logo />

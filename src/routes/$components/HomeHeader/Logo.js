@@ -1,11 +1,9 @@
 import style from './index.less'
 import { Link } from 'dva/router'
 import classNames from 'classnames'
-import logo from '../../assets/img/yay.jpg'
+import logo from '../../../assets/img/yay.jpg'
 
 const HomeHeader = () => {
-
-  console.log(style)
 
   return (<div className={classNames(style['logo'])} flex-row="between">
     <Link to={'/'} className={classNames(style['logo-link'], 'select-none pointer')} flex-row="center">

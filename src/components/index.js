@@ -1,6 +1,5 @@
-import HomeHeader from './HomeHeader'
-import HomeSidebar from './HomeSidebar'
+import Home from './Home'
 
 export {
-  HomeHeader, HomeSidebar
+  Home
 }

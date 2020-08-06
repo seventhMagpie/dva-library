@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 
 import style from './index.less'
-import avatarDef from '../../assets/img/yay.jpg'
+import avatarDef from '../../../assets/img/yay.jpg'
 
 const UserCenter = () => {
   return (<div className={classNames(style['user-center'])}>
