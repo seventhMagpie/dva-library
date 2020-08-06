@@ -4,8 +4,8 @@ import { MailOutlined, MacCommandOutlined } from '@ant-design/icons'
 import classNames from 'classnames'
 import { HomeHeader, HomeSidebar } from '../$components'
 
-import BookSystemUp from '../../components/BookSystem/BookUp'
-import BookSystemDown from '../../components/BookSystem/BookDown'
+import BookSystemUp from '../../components/BookSystem/BookSystemUp'
+import BookSystemDown from '../../components/BookSystem/BookSystemDown'
 import style from './index.less'
 
 const homeRouteConf = [
@@ -42,21 +42,23 @@ const homeRoute = () => {
       <div className={classNames(style['home-body'], style.sidebar)}>
         <HomeSidebar></HomeSidebar>
       </div>
-      <Switch>
-        {
-          homeRouteConf.map(curr=> {
-            if (curr.children) {
-              return (
-                curr.children.map(c => (
-                  <Route exact={c.exact} path={c.to} component={c.component} key={c.to}></Route>)
-                )// .concat((<Route exact={curr.exact} path={curr.to} component={curr.component} key={curr.to}></Route>))
-              )
-            } else {
-              return (<Route exact={curr.exact} path={curr.to} component={curr.component} key={curr.to}></Route>)
-            }
-          })
-        }
-      </Switch>
+      <div className={classNames(style['home-view'])} flex-item="1">
+        <Switch>
+          {
+            homeRouteConf.map(curr=> {
+              if (curr.children) {
+                return (
+                  curr.children.map(c => (
+                    <Route exact={c.exact} path={c.to} component={c.component} key={c.to}></Route>)
+                  )// .concat((<Route exact={curr.exact} path={curr.to} component={curr.component} key={curr.to}></Route>))
+                )
+              } else {
+                return (<Route exact={curr.exact} path={curr.to} component={curr.component} key={curr.to}></Route>)
+              }
+            })
+          }
+        </Switch>
+      </div>
     </div>
   </div>)
 }

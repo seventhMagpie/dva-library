@@ -9,6 +9,7 @@ function RouterConfig({ history }) {
       <Switch>
         <Redirect exact from="/" to="/book-system/up" />
         <Route path='/book-system' render={() => <Home />} />
+        <Route path='/borrow-system' render={() => <Home />} />
       </Switch>
     </Router>
   );

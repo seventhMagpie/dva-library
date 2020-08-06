@@ -28,6 +28,7 @@ const HomeSidebar = ({ dispatch }) => {
     <div flex-col="start">
       <Menu
         onClick={handleClick}
+        defaultOpenKeys={[ '/book-system' ]}
         mode="inline"
       >
         {
